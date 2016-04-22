@@ -1,0 +1,144 @@
+{extends file="../common/layout/layout.html"} 
+ 
+{block css}
+<link href="{$__PUBLIC__}/css/pages/dashboard/dashboard.css" rel="stylesheet"/>
+{/block} 
+
+{block main}
+
+<div class="main-card">
+	<div class="card active" data-cardid="111">
+		<ul>
+			<li>网络审计</li>
+			<li>9</li>
+			<li>建议</li>
+		</ul>
+	</div>
+	<div class="card" data-cardid="111">
+		<ul>
+			<li>宿主机审计</li>
+			<li>10</li>
+			<li>建议</li>
+		</ul>
+	</div>
+	<div class="card" data-cardid="111">
+		<ul>
+			<li>虚拟化审计</li>
+			<li><img style="width: 50px; height: 50px; vertical-align: initial; border-radius: 50%" src="http://img.mukewang.com/54da1cf40001294606400640-200-200.jpg" alt="正常"></li>
+			<li>一切正常</li>
+		</ul>
+	</div>
+	<div class="card" data-cardid="111">
+		<ul>
+			<li>云主机审计</li>
+			<li>100</li>
+			<li>建议</li>
+		</ul>
+	</div>
+	<div class="card" data-cardid="111">
+		<ul>
+			<li>应用审计</li>
+			<li><img style="width: 50px; height: 50px; vertical-align: initial; border-radius: 50%" src="http://img.mukewang.com/54da1cf40001294606400640-200-200.jpg" alt="正常"></li>
+			<li>一切正常</li>
+		</ul>
+	</div>
+	<div class="card" data-cardid="111">
+		<ul>
+			<li>数据审计</li>
+			<li>54</li>
+			<li>建议</li>
+		</ul>
+	</div>
+</div>
+
+
+<div class="info-list">
+	<ul>
+		<li><a href="#" data-listid="111">
+			<span class="list-text">账号</span>
+			<span class="list-icon">8</span>
+			<span class="move-line"></span>
+			</a></li>
+		<li><a href="#" data-listid="222" class="active">
+			<span class="list-text">ELB日志没有开启?</span>
+			<span class="list-icon">4</span>
+			<span class="move-line"></span>
+			</a></li>
+		<li><a href="#" data-listid="333">
+			<span class="list-text">镜像来源被删除</span>
+			<span class="list-icon">12</span>
+			<span class="move-line"></span>
+			</a></li>
+		<li><a href="#" data-listid="444">
+			<span class="list-text">RDS</span>
+			<span class="list-icon">1</span>
+			<span class="move-line"></span>
+			</a></li>
+		<li><a href="#" data-listid="555">
+			<span class="list-text">镜像来源被删除</span>
+			<span class="list-icon">1</span>
+			<span class="move-line"></span>
+			</a></li>
+		<li><a href="#" data-listid="666">
+			<span class="list-text">镜像来源被删除</span>
+			<span class="list-icon">1</span>
+			<span class="move-line"></span>
+			</a></li>
+	</ul>
+</div>
+
+<div class="timeline">
+	<div class="first-box">
+		<div class="info-content">
+			<p><sapn class="info-title">"ELB日志没有开启?"</sapn>&nbsp;&nbsp;显示<span class="info-num">4条</span>结果</p>
+			<span class="circle-icon"></span>
+		</div>
+	</div>
+	<!-- <div class="info-box">
+		<div class="info-content">
+			<p>问题1: IP没有使用</p>
+			<p>我们的建议: xxxxxxxxx</p>
+			<p><span>ID: 123456</span><span>时间: 2015年3月3日</span></p>
+			<span class="circle-icon"></span>
+			<span class="line-icon"></span>
+			<span class="ignore-icon" data-infoid="111">忽略</span>
+		</div>
+	</div>
+	<div class="info-box">
+		<div class="info-content">
+			<p>问题1: IP没有使用</p>
+			<p>我们的建议: xxxxxxxxx</p>
+			<p><span>ID: 123456</span><span>时间: 2015年3月3日</span></p>
+			<span class="circle-icon"></span>
+			<span class="line-icon"></span>
+			<span class="ignore-icon" data-infoid="222">忽略</span>
+		</div>
+	</div>
+	<div class="info-box">
+		<div class="info-content">
+			<p>问题1: IP没有使用</p>
+			<p>我们的建议: xxxxxxxxx</p>
+			<p><span>ID: 123456</span><span>时间: 2015年3月3日</span></p>
+			<span class="circle-icon"></span>
+			<span class="line-icon"></span>
+			<span class="ignore-icon" data-infoid="333">忽略</span>
+		</div>
+	</div>
+	<div class="info-box">
+		<div class="info-content">
+			<p>问题1: IP没有使用</p>
+			<p>我们的建议: xxxxxxxxx</p>
+			<p><span>ID: 123456</span><span>时间: 2015年3月3日</span></p>
+			<span class="circle-icon"></span>
+			<span class="line-icon"></span>
+			<span class="ignore-icon" data-infoid="444">忽略</span>
+		</div>
+	</div> -->
+</div>
+
+{/block}
+
+{block js}
+<script type="text/javascript" src="{$__PUBLIC__}/js/util/echarts/echarts.js"></script>
+<script type="text/javascript" src="{$__PUBLIC__}/js/pages/dashboard/index.js"></script>
+{/block}

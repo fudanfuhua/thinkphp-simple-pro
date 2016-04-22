@@ -1,0 +1,158 @@
+{extends file="../common/layout/layout.html"} 
+ 
+{block css}
+<link href="{$__PUBLIC__}/css/util/echarts/carousel.css" rel="stylesheet"/>
+<link href="{$__PUBLIC__}/css/pages/aduit/aduit.css" rel="stylesheet"/>
+{/block} 
+
+{block main}
+<div class="row" >
+	<div class="col-md-4 col-sm-12" >
+		<div id="main" style="height:500px" class="main" ></div>
+	</div>
+	<div class="col-md-8 col-sm-12">
+		<div class="col-md-12">
+			<table class="table network-table" id="network-table-wrap">
+			      <tbody>
+			        <tr class="network-tabletr active" >
+			          <td>网络</td>
+			          <td>Mark</td>
+			          <td>Otto</td>
+			          <td>@mdo</td>
+			          <td>@mdo</td>
+			          <td width="5%" class="network-table-list"><span class="glyphicon glyphicon-th-list" ></span></td>
+			        </tr>
+			         <tr class="network-tabletr">
+			          <td>宿主机</td>
+			          <td>Mark</td>
+			          <td>Otto</td>
+			          <td>@mdo</td>
+			          <td>@mdo</td>
+			          <td width="5%" class="network-table-list"><span class="glyphicon glyphicon-th-list" ></span></td>
+			        </tr>
+			         <tr class="network-tabletr">
+			          <td>虚拟机</td>
+			          <td>Mark</td>
+			          <td>Otto</td>
+			          <td>@mdo</td>
+			          <td>@mdo</td>
+			          <td width="5%" class="network-table-list"><span class="glyphicon glyphicon-th-list" ></span></td>
+			        </tr>
+			         <tr class="network-tabletr">
+			          <td>云主机</td>
+			          <td>Mark</td>
+			          <td>Otto</td>
+			          <td>@mdo</td>
+			          <td>@mdo</td>
+			          <td width="5%" class="network-table-list"><span class="glyphicon glyphicon-th-list" ></span></td>
+			        </tr>
+			         <tr class="network-tabletr">
+			          <td>应用</td>
+			          <td>Mark</td>
+			          <td>Otto</td>
+			          <td>@mdo</td>
+			          <td>@mdo</td>
+			          <td width="5%" class="network-table-list"><span class="glyphicon glyphicon-th-list" ></span></td>
+			        </tr>
+			         <tr class="network-tabletr">
+			          <td>数据</td>
+			          <td>Mark</td>
+			          <td>Otto</td>
+			          <td>@mdo</td>
+			          <td>@mdo</td>
+			          <td width="5%" class="network-table-list"><span class="glyphicon glyphicon-th-list" ></span></td>
+			        </tr>
+			      </tbody>
+			</table>
+		</div>
+		<div class="row">
+			<div id="main2" style="height:300px" class="main" ></div>
+		</div>
+	</div>
+</div>
+<div class="row network-box" >
+	<div class="col-md-4">
+		<h5>策略</h5>
+		<ul>
+			<li class="network-lis">
+				<span class="title">CPU</span>
+				<span class="network-bar"><i class="network-percent" style="width: 50%;"></i></span>
+				<span class="num">43</span>
+			</li>
+			<li class="network-lis">
+				<span class="title">CPU</span>
+				<span class="network-bar"><i class="network-percent" style="width: 70%;"></i></span>
+				<span class="num">43</span>
+			</li>
+			<li class="network-lis">
+				<span class="title">CPU</span>
+				<span class="network-bar"><i class="network-percent" style="width: 80%;"></i></span>
+				<span class="num">43</span>
+			</li>
+			<li class="network-lis">
+				<span class="title">CPU</span>
+				<span class="network-bar"><i class="network-percent" style="width: 90%;"></i></span>
+				<span class="num">43</span>
+			</li>
+		</ul>
+	</div>
+	<div class="col-md-4">
+		<h5>策略</h5>
+		<ul>
+			<li class="network-lis">
+				<span class="title">CPU</span>
+				<span class="network-bar"><i class="network-percent" style="width: 50%;"></i></span>
+				<span class="num">43</span>
+			</li>
+			<li class="network-lis">
+				<span class="title">CPU</span>
+				<span class="network-bar"><i class="network-percent" style="width: 70%;"></i></span>
+				<span class="num">43</span>
+			</li>
+			<li class="network-lis">
+				<span class="title">CPU</span>
+				<span class="network-bar"><i class="network-percent" style="width: 80%;"></i></span>
+				<span class="num">43</span>
+			</li>
+			<li class="network-lis">
+				<span class="title">CPU</span>
+				<span class="network-bar"><i class="network-percent" style="width: 90%;"></i></span>
+				<span class="num">43</span>
+			</li>
+		</ul>
+	</div>
+	<div class="col-md-4">
+		<h5>策略</h5>
+		<ul>
+			<li class="network-lis">
+				<span class="title">CPU</span>
+				<span class="network-bar"><i class="network-percent" style="width: 50%;"></i></span>
+				<span class="num">43</span>
+			</li>
+			<li class="network-lis">
+				<span class="title">CPU</span>
+				<span class="network-bar"><i class="network-percent" style="width: 70%;"></i></span>
+				<span class="num">43</span>
+			</li>
+			<li class="network-lis">
+				<span class="title">CPU</span>
+				<span class="network-bar"><i class="network-percent" style="width: 80%;"></i></span>
+				<span class="num">43</span>
+			</li>
+			<li class="network-lis">
+				<span class="title">CPU</span>
+				<span class="network-bar"><i class="network-percent" style="width: 90%;"></i></span>
+				<span class="num">43</span>
+			</li>
+		</ul>
+	</div>
+</div>
+{/block}
+
+{block js}
+<script type="text/javascript" src="{$__PUBLIC__}/js/util/echarts/echarts-all.js"></script>
+<script type="text/javascript" src="{$__PUBLIC__}/js/util/baiduTemplate/baiduTemplate.js"></script>
+<script type="text/javascript" src="{$__PUBLIC__}/js/pages/aduit/index.js"></script>
+
+</script>
+{/block}

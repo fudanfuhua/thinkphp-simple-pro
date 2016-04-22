@@ -1,0 +1,67 @@
+{
+	"data": [
+		 {
+		 	"cataName": "策略",
+		 	 "list": [
+		 	 	{
+		 	 		"name": "CPU",
+		 	 		"percent": "50"
+		 	 	},
+		 	 	{
+		 	 		"name": "内存",
+		 	 		"percent": "70"
+		 	 	},
+		 	 	{
+		 	 		"name": "CPU",
+		 	 		"percent": "50"
+		 	 	},
+		 	 	{
+		 	 		"name": "CPU2",
+		 	 		"percent": "80"
+		 	 	}
+		 	 ]
+		 },
+		 {
+		 	"cataName": "IP",
+		 	 "list": [
+		 	 	{
+		 	 		"name": "CPU",
+		 	 		"percent": "30"
+		 	 	},
+		 	 	{
+		 	 		"name": "内存",
+		 	 		"percent": "40"
+		 	 	},
+		 	 	{
+		 	 		"name": "CPU",
+		 	 		"percent": "60"
+		 	 	},
+		 	 	{
+		 	 		"name": "CPU2",
+		 	 		"percent": "90"
+		 	 	}
+		 	 ]
+		 },
+		 {
+		 	"cataName": "操作系统",
+		 	 "list": [
+		 	 	{
+		 	 		"name": "CPU",
+		 	 		"percent": "30"
+		 	 	},
+		 	 	{
+		 	 		"name": "内存",
+		 	 		"percent": "40"
+		 	 	},
+		 	 	{
+		 	 		"name": "CPU",
+		 	 		"percent": "60"
+		 	 	},
+		 	 	{
+		 	 		"name": "CPU2",
+		 	 		"percent": "90"
+		 	 	}
+		 	 ]
+		 }
+	]
+}

@@ -1,0 +1,110 @@
+{extends file="../common/layout/layout.html"} 
+ 
+{block css}
+<link href="{$__PUBLIC__}/css/util/echarts/carousel.css" rel="stylesheet"/>
+<link href="{$__PUBLIC__}/css/pages/aduit/aduit.css" rel="stylesheet"/>
+{/block} 
+
+{block main}
+<div class="row" >
+	<div class="col-md-4 col-sm-12">
+		<div id="network-pie" style="height:400px"  ></div>
+		<ul class="text-center network-tootlip" id="network-tootlip-box"> 
+			{literal}
+		    <script type="text/template" id="network-tootlip-tpl">
+
+		    <%for(var i=0,len=data.length;i<len; i++){%>
+		    <%
+		    	var className=''; 
+		    	if(i==0){
+		    		className = 'cdanger';
+		    	}else if(i==1){
+		    		className = 'cwaring';
+		    	}else if(i==2){
+		    		className = 'ctip';
+		    	}
+		    %>
+		    	<li><i class="circle <%=className%>"></i><%=data[i].name%> （<%=data[i].total%>  - <%=data[i].value%> % ）<strong class="t-danger"><%=data[i].suggest%> </strong>条建议</li>
+		    <%}%>
+			
+			</script>
+			{/literal}
+			
+		</ul>
+	</div>
+	<div class="col-md-8 col-sm-12">
+		<div class="col-md-12">
+			<table class="table network-table" id="network-table-wrap">
+				  <thead>
+				  	<tr>
+			       	  <td></td>
+			          <td><i class="circle cdanger"></i> 危机</td>
+			          <td><i class="circle cwaring"></i> 警告</td>
+			          <td><i class="circle ctip"></i> 提示</td>
+			          <td><i class="circle"></i> 普通</td>
+			       </tr>
+				  </thead>
+			      <tbody id="network-tbody">
+			          {literal}
+				       <script type="text/template" id="network-table">
+				           <%if(list.length>0) {%>
+				       		<%for(var i=0,len=list.length;i<len;i++){%>
+			       		        <tr class="network-tabletr" >
+			       		          <td><%=list[i].name%></td>
+			       		          <td><%=list[i].num0%></td>
+			       		          <td><%=list[i].num1%></td>
+			       		          <td><%=list[i].num2%></td>
+			       		          <td><%=list[i].num3%></td>
+			       		          <td width="5%" class="network-table-list"><span class="glyphicon glyphicon-th-list" ></span></td>
+			       		        </tr>
+				       		<%}%>
+				       		<%}else{%>
+				       			<tr>
+				       				<td colspan="5">暂无数据！</td>
+				       			</tr>
+				       		<%}%>
+				       </script>
+       		        {/literal}
+			      </tbody>
+			</table>
+		</div>
+		<div class="col-md-12">
+			<div id="network-bar" style="height:300px" class="main" ></div>
+			
+		</div>
+	</div>
+</div>
+<div class="row network-box" id="network-list-box">
+  {literal}
+   <script type="text/template" id="network-list-tpl">
+       <%if(data.length>0) {%>
+   		<%for(var i=0,len=data.length;i<len;i++){%>
+		     <div class="col-md-4">
+		     	<h5><%=data[i].cataName%></h5>
+		     	<ul>
+		     	    <%for(var j=0, list=data[i].list; j<data[i].list.length; j++){%>
+						<li class="network-lis">
+							<span class="title"><%=list[j].name%></span>
+							<span class="network-bar"><i class="network-percent" style="width:<%=list[j].percent%>%"></i></span>
+							<span class="num"><%=list[j].percent%></span>
+						</li>
+		     	   <%}%>
+		     	</ul>
+		     </div>
+   		<%}}else{%>
+   			<div class="col-md-4">
+	   			暂无数据！
+   			</div>
+   		<%}%>
+   </script>
+   {/literal}
+</div>
+{/block}
+
+{block js}
+<script type="text/javascript" src="{$__PUBLIC__}/js/util/echarts/echarts-all.js"></script>
+<script type="text/javascript" src="{$__PUBLIC__}/js/util/baiduTemplate/baiduTemplate.js"></script>
+<script type="text/javascript" src="{$__PUBLIC__}/js/pages/aduit/index.js"></script>
+
+</script>
+{/block}

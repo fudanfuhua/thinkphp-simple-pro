@@ -1,0 +1,242 @@
+<?php /* Smarty version Smarty-3.1.6, created on 2016-04-20 19:20:41
+         compiled from "./Application/Cloud/View\Audit\index.html" */ ?>
+<?php /*%%SmartyHeaderCode:9205715b5df294821-52788422%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '69330547eb0bd0c78c33db6de83ed24e1ba478e3' => 
+    array (
+      0 => './Application/Cloud/View\\Audit\\index.html',
+      1 => 1461151241,
+      2 => 'file',
+    ),
+    'ff1d6384a2f49ca6df8e9c214cd4a89695e0db6c' => 
+    array (
+      0 => 'E:\\xampp\\htdocs\\recent\\Application\\Cloud\\View\\common\\layout\\layout.html',
+      1 => 1461140548,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '9205715b5df294821-52788422',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.6',
+  'unifunc' => 'content_5715b5df2ade1',
+  'variables' => 
+  array (
+    '__PUBLIC__' => 0,
+    '__APP__' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5715b5df2ade1')) {function content_5715b5df2ade1($_smarty_tpl) {?><!DOCTYPE html>
+<html>
+<head>
+    <title>cloud</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="<?php echo $_smarty_tpl->tpl_vars['__PUBLIC__']->value;?>
+/css/util/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $_smarty_tpl->tpl_vars['__PUBLIC__']->value;?>
+/css/util/font-awesome/font-awesome.min.css">
+    <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['__PUBLIC__']->value;?>
+/css/pages/common/common.css" />
+    
+<link href="<?php echo $_smarty_tpl->tpl_vars['__PUBLIC__']->value;?>
+/css/util/echarts/carousel.css" rel="stylesheet"/>
+<link href="<?php echo $_smarty_tpl->tpl_vars['__PUBLIC__']->value;?>
+/css/pages/aduit/aduit.css" rel="stylesheet"/>
+
+</head>
+<body>
+    <?php echo $_smarty_tpl->getSubTemplate ("common/header/header.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+    <?php echo $_smarty_tpl->getSubTemplate ("common/left/left.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+    <div class="main-body">
+    
+<div class="row" >
+	<div class="col-md-4 col-sm-12" style="position: relative;">
+		<div id="main" style="height:500px"  ></div>
+	</div>
+	<div class="col-md-8 col-sm-12">
+		<div class="col-md-12">
+			<table class="table network-table" id="network-table-wrap">
+				  
+			      <tbody>
+			       <tr>
+			       	  <td></td>
+			          <td><i class="circle cdanger"></i>危机</td>
+			          <td><i class="circle cwaring"></i>警告</td>
+			          <td><i class="circle ctip"></i>提示</td>
+			          <td><i class="circle"></i>普通</td>
+			       </tr>
+			       <script type="text/template" id="network-table">
+			       		
+		       		        <tr class="network-tabletr" >
+		       		          <td>网络</td>
+		       		          <td>Mark</td>
+		       		          <td>Otto</td>
+		       		          <td>@mdo</td>
+		       		          <td>@mdo</td>
+		       		          <td width="5%" class="network-table-list"><span class="glyphicon glyphicon-th-list" ></span></td>
+		       		        </tr>
+			       		
+			       		
+			       </script>
+			        
+			         <tr class="network-tabletr">
+			          <td>宿主机</td>
+			          <td>Mark</td>
+			          <td>Otto</td>
+			          <td>@mdo</td>
+			          <td>@mdo</td>
+			          <td width="5%" class="network-table-list"><span class="glyphicon glyphicon-th-list" ></span></td>
+			        </tr>
+			         <tr class="network-tabletr">
+			          <td>虚拟机</td>
+			          <td>Mark</td>
+			          <td>Otto</td>
+			          <td>@mdo</td>
+			          <td>@mdo</td>
+			          <td width="5%" class="network-table-list"><span class="glyphicon glyphicon-th-list" ></span></td>
+			        </tr>
+			         <tr class="network-tabletr">
+			          <td>云主机</td>
+			          <td>Mark</td>
+			          <td>Otto</td>
+			          <td>@mdo</td>
+			          <td>@mdo</td>
+			          <td width="5%" class="network-table-list"><span class="glyphicon glyphicon-th-list" ></span></td>
+			        </tr>
+			         <tr class="network-tabletr">
+			          <td>应用</td>
+			          <td>Mark</td>
+			          <td>Otto</td>
+			          <td>@mdo</td>
+			          <td>@mdo</td>
+			          <td width="5%" class="network-table-list"><span class="glyphicon glyphicon-th-list" ></span></td>
+			        </tr>
+			         <tr class="network-tabletr">
+			          <td>数据</td>
+			          <td>Mark</td>
+			          <td>Otto</td>
+			          <td>@mdo</td>
+			          <td>@mdo</td>
+			          <td width="5%" class="network-table-list"><span class="glyphicon glyphicon-th-list" ></span></td>
+			        </tr>
+			      </tbody>
+			</table>
+		</div>
+		<div class="row">
+			<div id="main2" style="height:300px" class="main" ></div>
+		</div>
+	</div>
+</div>
+<div class="row network-box" >
+	<div class="col-md-4">
+		<h5>策略</h5>
+		<ul>
+			<li class="network-lis">
+				<span class="title">CPU</span>
+				<span class="network-bar"><i class="network-percent" style="width: 50%;"></i></span>
+				<span class="num">43</span>
+			</li>
+			<li class="network-lis">
+				<span class="title">CPU</span>
+				<span class="network-bar"><i class="network-percent" style="width: 70%;"></i></span>
+				<span class="num">43</span>
+			</li>
+			<li class="network-lis">
+				<span class="title">CPU</span>
+				<span class="network-bar"><i class="network-percent" style="width: 80%;"></i></span>
+				<span class="num">43</span>
+			</li>
+			<li class="network-lis">
+				<span class="title">CPU</span>
+				<span class="network-bar"><i class="network-percent" style="width: 90%;"></i></span>
+				<span class="num">43</span>
+			</li>
+		</ul>
+	</div>
+	<div class="col-md-4">
+		<h5>策略</h5>
+		<ul>
+			<li class="network-lis">
+				<span class="title">CPU</span>
+				<span class="network-bar"><i class="network-percent" style="width: 50%;"></i></span>
+				<span class="num">43</span>
+			</li>
+			<li class="network-lis">
+				<span class="title">CPU</span>
+				<span class="network-bar"><i class="network-percent" style="width: 70%;"></i></span>
+				<span class="num">43</span>
+			</li>
+			<li class="network-lis">
+				<span class="title">CPU</span>
+				<span class="network-bar"><i class="network-percent" style="width: 80%;"></i></span>
+				<span class="num">43</span>
+			</li>
+			<li class="network-lis">
+				<span class="title">CPU</span>
+				<span class="network-bar"><i class="network-percent" style="width: 90%;"></i></span>
+				<span class="num">43</span>
+			</li>
+		</ul>
+	</div>
+	<div class="col-md-4">
+		<h5>策略</h5>
+		<ul>
+			<li class="network-lis">
+				<span class="title">CPU</span>
+				<span class="network-bar"><i class="network-percent" style="width: 50%;"></i></span>
+				<span class="num">43</span>
+			</li>
+			<li class="network-lis">
+				<span class="title">CPU</span>
+				<span class="network-bar"><i class="network-percent" style="width: 70%;"></i></span>
+				<span class="num">43</span>
+			</li>
+			<li class="network-lis">
+				<span class="title">CPU</span>
+				<span class="network-bar"><i class="network-percent" style="width: 80%;"></i></span>
+				<span class="num">43</span>
+			</li>
+			<li class="network-lis">
+				<span class="title">CPU</span>
+				<span class="network-bar"><i class="network-percent" style="width: 90%;"></i></span>
+				<span class="num">43</span>
+			</li>
+		</ul>
+	</div>
+</div>
+
+    </div>
+    <script type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['__PUBLIC__']->value;?>
+/js/util/jquery/1.9.0/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['__PUBLIC__']->value;?>
+/js/util/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['__PUBLIC__']->value;?>
+/js/util/underscore/underscore.js"></script>
+    <script type="text/javascript">
+        var __PUBLICDOMAIN = "<?php echo $_smarty_tpl->tpl_vars['__PUBLIC__']->value;?>
+";
+        var __APPDOMAIN = "<?php echo $_smarty_tpl->tpl_vars['__APP__']->value;?>
+";
+    </script>
+    <script type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['__PUBLIC__']->value;?>
+/js/pages/common/common.js"></script>
+    
+<script type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['__PUBLIC__']->value;?>
+/js/util/echarts/echarts-all.js"></script>
+<script type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['__PUBLIC__']->value;?>
+/js/util/baiduTemplate/baiduTemplate.js"></script>
+<script type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['__PUBLIC__']->value;?>
+/js/pages/aduit/index.js"></script>
+
+</script>
+
+</body>
+</html>
+<?php }} ?>

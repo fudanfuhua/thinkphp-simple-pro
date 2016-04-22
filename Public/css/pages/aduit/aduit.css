@@ -1,0 +1,106 @@
+
+@keyframes barwidth
+{
+	from {width:0px;}
+}
+.circle{
+	border-radius: 8px;
+	background: #aeb3b8;
+	display:inline-block;
+	margin: 0 5px 0 0;
+	vertical-align: middle;
+	width: 8px;
+	height: 8px;
+}
+.t-danger{
+	color: #fa7d7d;
+}
+.cdanger{
+	background-color: #fa7d7d;
+}
+.cwaring{
+	background-color: #f9dd8a;
+}
+.ctip{
+	background-color: #5bc7e6;
+}
+.network-tootlip .circle{
+	margin-right: 10px;
+	width: 16px;
+	height: 16px;
+}
+.network-tootlip li{
+	margin-top: 10px;
+}
+.network-box{
+	margin: 70px 0 0 0;
+	padding: 50px 0 0 0;
+	border-top: 1px solid #aaa;
+}
+.network-box h5{
+	font-size: 14px;
+	font-weight: bold;
+}
+.network-box .network-bar{
+	display: inline-block;
+	margin: 0 10px;
+	background: #edf0f5;
+	width: 50%;
+}
+.network-box .network-lis{
+	margin: 15px 0 0 0;
+}
+.network-box .network-lis span, .network-box .network-percent{
+	display: inline-block;
+	vertical-align: middle;
+}
+.network-box .network-bar, .network-box .network-percent{
+	height: 20px;
+}
+.network-box .network-percent{
+	background: #7dcbe1;
+	position: relative;
+}
+.network-percent{
+	animation:barwidth 1s ease;
+	-webkit-animation:barwidth 1s ease;
+	-moz-animation:barwidth 1s ease;
+	-ms-animation:barwidth 1s ease;
+}
+.network-table{
+	color: #60757d;
+}
+.network-table .active{
+	border: 1px solid #ddd;
+	background: #f2f4f8;
+}
+.network-table-list{
+	display: none;
+	border-left: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	text-align: center;
+	cursor: pointer;
+
+}
+.network-table-list .glyphicon{
+	-webkit-transform: rotateZ(-360deg);
+    -moz-transform: rotateZ(-360deg);
+    -ms-transform: rotateZ(-360deg);
+    -o-transform: rotateZ(-360deg);
+    transform: rotateZ(-360deg);
+     -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+    -moz-transition: -moz-transform 0.3s, opacity 0.3s;
+    -o-transition: -o-transform 0.3s, opacity 0.3s;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.network-table-list:hover .glyphicon{
+	-webkit-transform: rotateZ(0deg);
+    -moz-transform: rotateZ(0deg);
+    -ms-transform: rotateZ(0deg);
+    -o-transform: rotateZ(0deg);
+    transform: rotateZ(0deg);
+}
+.network-table-list:hover{
+	color: #7dcbe1;
+}

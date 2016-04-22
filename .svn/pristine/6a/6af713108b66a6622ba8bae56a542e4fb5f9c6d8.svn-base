@@ -1,0 +1,40 @@
+<?php /* Smarty version Smarty-3.1.6, created on 2016-04-19 19:08:46
+         compiled from "./Application/Cloud/View\common\left\left.html" */ ?>
+<?php /*%%SmartyHeaderCode:136475715c1d1d32c58-27134751%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '4241deae68fd5ccb7a43ef3bce8b648bee20a798' => 
+    array (
+      0 => './Application/Cloud/View\\common\\left\\left.html',
+      1 => 1461064121,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '136475715c1d1d32c58-27134751',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.6',
+  'unifunc' => 'content_5715c1d1d38a1',
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5715c1d1d38a1')) {function content_5715c1d1d38a1($_smarty_tpl) {?><div class="left-col">
+    <ul>
+        <li>
+            <a href="">
+                <span class="nav nav-active">仪表板</span>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <span class="nav">审计仪表板</span>
+            </a>
+        </li>
+    </ul>
+    
+</div>
+
+
+
+<?php }} ?>

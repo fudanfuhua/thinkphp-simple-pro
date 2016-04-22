@@ -1,0 +1,79 @@
+{extends file="../common/layout/layout.html"} 
+ 
+{block css}
+<link href="{$__PUBLIC__}/css/pages/dashboard/dashboard.css" rel="stylesheet"/>
+{/block} 
+
+{block main}
+<div class="main-card"></div>
+
+<div class="info-list"><ul></ul></div>
+
+<div class="timeline">
+	<div class="first-box">
+		<div class="info-content">
+			<p><sapn class="info-title"></sapn>&nbsp;&nbsp;显示<span class="info-num"></span><span style="color: red;">条</span>结果</p>
+			<span class="circle-icon active"></span>
+		</div>
+	</div>
+</div>
+{/block}
+
+{block tpl}
+<script id="timeline-tpl" type="text/template">
+	{literal}
+	<% for(var i = 0; i < list.length; i++) { %>
+		<% var item = list[i], num = i+1 %> 
+		<div class="info-box">   
+			<div class="info-content"> 
+			<p>问题<%=num%>: <span class="font-style"><%=item.question %></span></p> 
+			<p>我们的建议: <span class="font-style"><%=item.suggest %></span></p> 
+				<p><span>ID: <%=item.ID%></span><span class="time-span">时间: <%=item.time %></span></p> 
+				<span class="circle-icon"></span> 
+				<span class="line-icon"></span> 
+				<a href="#" class="ignore-icon" data-infoid="<%=item.infoid%>">忽略</a> 
+			</div> 
+		</div> 
+	<% } %>
+	{/literal}
+</script>
+
+<script id="list-tpl" type="text/template">
+	{literal}
+	<% for(var i = 0; i < list.length; i++) { %> 
+			<% var item = list[i] %> 
+			<li><a href="#" class="list-item <%= (i == 0) && "active" %>" data-listid="<%=item.listid%>"> 
+			<span class="list-text"><%=item.title%></span> 
+			<span class="list-icon"><%=item.num%></span> 
+			<span class="move-line"></span> 
+			</a></li> 
+	<% } %>
+	{/literal}
+</script>
+
+<script id="card-tpl" type="text/template">
+	{literal}
+	<% for(var i = 0; i < list.length; i++) { %> 
+		<% var item = list[i] %> 
+		<div class="card <%= (i == 0) && "active" %>" data-cardid="<%=item.cardid %>"> 
+			<ul> 
+				<li><%=item.title%></li> 
+				<li> 
+					<% { if (item.num == "") %> 
+						<img style="width: 50px; height: 50px; vertical-align: initial; border-radius: 50%" src="http://img.mukewang.com/54da1cf40001294606400640-200-200.jpg" alt="正常"> 
+					<% else %> 
+						<%=item.num%> 
+					<% } %> 
+				</li> 
+				<li><%=item.status %></li> 
+			</ul> 
+		</div> 
+	<% } %>
+	{/literal}
+</script>
+{/block}
+
+
+{block js}
+<script type="text/javascript" src="{$__PUBLIC__}/js/pages/dashboard/index.js"></script>
+{/block}

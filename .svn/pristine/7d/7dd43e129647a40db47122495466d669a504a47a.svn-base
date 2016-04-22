@@ -1,0 +1,210 @@
+<?php /* Smarty version Smarty-3.1.6, created on 2016-04-20 18:59:24
+         compiled from "./Application/Cloud/View\Dashboard\index.html" */ ?>
+<?php /*%%SmartyHeaderCode:20335715b5fac54196-69212085%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '060009ef300807748b0a3c97c65e91033064375a' => 
+    array (
+      0 => './Application/Cloud/View\\Dashboard\\index.html',
+      1 => 1461149885,
+      2 => 'file',
+    ),
+    'ff1d6384a2f49ca6df8e9c214cd4a89695e0db6c' => 
+    array (
+      0 => 'E:\\xampp\\htdocs\\recent\\Application\\Cloud\\View\\common\\layout\\layout.html',
+      1 => 1461149197,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '20335715b5fac54196-69212085',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.6',
+  'unifunc' => 'content_5715b5fac7353',
+  'variables' => 
+  array (
+    '__PUBLIC__' => 0,
+    '__APP__' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5715b5fac7353')) {function content_5715b5fac7353($_smarty_tpl) {?><!DOCTYPE html>
+<html>
+<head>
+    <title>cloud</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="<?php echo $_smarty_tpl->tpl_vars['__PUBLIC__']->value;?>
+/css/util/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $_smarty_tpl->tpl_vars['__PUBLIC__']->value;?>
+/css/util/font-awesome/font-awesome.min.css">
+    <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['__PUBLIC__']->value;?>
+/css/pages/common/common.css" />
+    
+<link href="<?php echo $_smarty_tpl->tpl_vars['__PUBLIC__']->value;?>
+/css/pages/dashboard/dashboard.css" rel="stylesheet"/>
+
+</head>
+<body>
+    <?php echo $_smarty_tpl->getSubTemplate ("common/header/header.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+    <?php echo $_smarty_tpl->getSubTemplate ("common/left/left.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+    <div class="main-body">
+    
+
+<div class="main-card">
+	<!-- <div class="card" data-cardid="111">
+		<ul>
+			<li>网络审计</li>
+			<li>9</li>
+			<li>建议</li>
+		</ul>
+	</div>
+	<div class="card" data-cardid="111">
+		<ul>
+			<li>宿主机审计</li>
+			<li>10</li>
+			<li>建议</li>
+		</ul>
+	</div>
+	<div class="card" data-cardid="111">
+		<ul>
+			<li>虚拟化审计</li>
+			<li><img style="width: 50px; height: 50px; vertical-align: initial; border-radius: 50%" src="http://img.mukewang.com/54da1cf40001294606400640-200-200.jpg" alt="正常"></li>
+			<li>一切正常</li>
+		</ul>
+	</div>
+	<div class="card" data-cardid="111">
+		<ul>
+			<li>云主机审计</li>
+			<li>100</li>
+			<li>建议</li>
+		</ul>
+	</div>
+	<div class="card" data-cardid="111">
+		<ul>
+			<li>应用审计</li>
+			<li><img style="width: 50px; height: 50px; vertical-align: initial; border-radius: 50%" src="http://img.mukewang.com/54da1cf40001294606400640-200-200.jpg" alt="正常"></li>
+			<li>一切正常</li>
+		</ul>
+	</div>
+	<div class="card" data-cardid="111">
+		<ul>
+			<li>数据审计</li>
+			<li>54</li>
+			<li>建议</li>
+		</ul>
+	</div> -->
+</div>
+
+
+<div class="info-list">
+	<ul>
+		<!-- <li><a href="#" data-listid="111">
+			<span class="list-text">账号</span>
+			<span class="list-icon">8</span>
+			<span class="move-line"></span>
+			</a></li>
+		<li><a href="#" data-listid="222" class="active">
+			<span class="list-text">ELB日志没有开启?</span>
+			<span class="list-icon">4</span>
+			<span class="move-line"></span>
+			</a></li>
+		<li><a href="#" data-listid="333">
+			<span class="list-text">镜像来源被删除</span>
+			<span class="list-icon">12</span>
+			<span class="move-line"></span>
+			</a></li>
+		<li><a href="#" data-listid="444">
+			<span class="list-text">RDS</span>
+			<span class="list-icon">1</span>
+			<span class="move-line"></span>
+			</a></li>
+		<li><a href="#" data-listid="555">
+			<span class="list-text">镜像来源被删除</span>
+			<span class="list-icon">1</span>
+			<span class="move-line"></span>
+			</a></li>
+		<li><a href="#" data-listid="666">
+			<span class="list-text">镜像来源被删除</span>
+			<span class="list-icon">1</span>
+			<span class="move-line"></span>
+			</a></li> -->
+	</ul>
+</div>
+
+<div class="timeline">
+	<div class="first-box">
+		<div class="info-content">
+			<p><sapn class="info-title"></sapn>&nbsp;&nbsp;显示<span class="info-num"></span><span style="color: red;">条</span>结果</p>
+			<span class="circle-icon"></span>
+		</div>
+	</div>
+	<!-- <div class="info-box">
+		<div class="info-content">
+			<p>问题1: IP没有使用</p>
+			<p>我们的建议: xxxxxxxxx</p>
+			<p><span>ID: 123456</span><span>时间: 2015年3月3日</span></p>
+			<span class="circle-icon"></span>
+			<span class="line-icon"></span>
+			<span class="ignore-icon" data-infoid="111">忽略</span>
+		</div>
+	</div>
+	<div class="info-box">
+		<div class="info-content">
+			<p>问题1: IP没有使用</p>
+			<p>我们的建议: xxxxxxxxx</p>
+			<p><span>ID: 123456</span><span>时间: 2015年3月3日</span></p>
+			<span class="circle-icon"></span>
+			<span class="line-icon"></span>
+			<span class="ignore-icon" data-infoid="222">忽略</span>
+		</div>
+	</div>
+	<div class="info-box">
+		<div class="info-content">
+			<p>问题1: IP没有使用</p>
+			<p>我们的建议: xxxxxxxxx</p>
+			<p><span>ID: 123456</span><span>时间: 2015年3月3日</span></p>
+			<span class="circle-icon"></span>
+			<span class="line-icon"></span>
+			<span class="ignore-icon" data-infoid="333">忽略</span>
+		</div>
+	</div>
+	<div class="info-box">
+		<div class="info-content">
+			<p>问题1: IP没有使用</p>
+			<p>我们的建议: xxxxxxxxx</p>
+			<p><span>ID: 123456</span><span>时间: 2015年3月3日</span></p>
+			<span class="circle-icon"></span>
+			<span class="line-icon"></span>
+			<span class="ignore-icon" data-infoid="444">忽略</span>
+		</div>
+	</div> -->
+</div>
+
+
+    </div>
+    <script type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['__PUBLIC__']->value;?>
+/js/util/jquery/1.9.0/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['__PUBLIC__']->value;?>
+/js/util/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['__PUBLIC__']->value;?>
+/js/util/underscore/underscore.js"></script>
+    <script type="text/javascript">
+        var __PUBLICDOMAIN = "<?php echo $_smarty_tpl->tpl_vars['__PUBLIC__']->value;?>
+";
+        var __APPDOMAIN = "<?php echo $_smarty_tpl->tpl_vars['__APP__']->value;?>
+";
+    </script>
+    <script type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['__PUBLIC__']->value;?>
+/js/pages/common/common.js"></script>
+    
+<script type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['__PUBLIC__']->value;?>
+/js/pages/dashboard/index.js"></script>
+
+</body>
+</html>
+<?php }} ?>

@@ -1,0 +1,7 @@
+	<div class="header">
+		<div class="logo">LOGO</div>
+		<div class="user-info">
+			<span>LOGINNMAE</span>
+			<span>[退出]</span>
+		</div>
+	</div>

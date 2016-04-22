@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>cloud</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="{$__PUBLIC__}/css/util/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{$__PUBLIC__}/css/util/font-awesome/font-awesome.min.css">
+    <link rel="stylesheet" href="{$__PUBLIC__}/css/pages/common/common.css" />
+    {block css}{/block}
+</head>
+<body>
+    {include file="common/header/header.html"}
+    {include file="common/left/left.html"}
+    <div class="main-body">
+    {block main}{/block}
+    </div>
+    <script type="text/javascript" src="{$__PUBLIC__}/js/util/jquery/1.9.0/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="{$__PUBLIC__}/js/util/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{$__PUBLIC__}/js/util/underscore/underscore.js"></script>
+    <script type="text/javascript">
+        var __PUBLICDOMAIN = "{$__PUBLIC__}";
+        var __APPDOMAIN = "{$__APP__}";
+    </script>
+    <script type="text/javascript" src="{$__PUBLIC__}/js/pages/common/common.js"></script>
+    {block js}{/block}
+</body>
+</html>

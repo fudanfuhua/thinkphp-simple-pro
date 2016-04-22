@@ -1,0 +1,18 @@
+<div class="left-col">
+    <ul>
+        <li>
+            <a href="{$__APP__}/Dashboard">
+                <span class="nav {if $leftNav == 'dashboard'}nav-active{/if}">仪表板</span>
+            </a>
+        </li>
+        <li>
+            <a href="{$__APP__}/Audit">
+                <span class="nav {if $leftNav == 'audit'}nav-active{/if}">审计仪表板</span>
+            </a>
+        </li>
+    </ul>
+    
+</div>
+
+
+

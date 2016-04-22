@@ -1,0 +1,177 @@
+var option = {
+    tooltip : {
+        trigger: 'item',
+        formatter: "{a} <br/>{b} : {c} ({d}%)"
+    },
+    legend: {
+        orient : 'vertical',
+        x : 'center',
+        y: 'bottom',
+        data:['直接访问','邮件营销','联盟广告','视频广告','搜索引擎']
+    },
+    color: ['#fa7d7d', '#f9dd8a', '#5bc7e6', '#aeb3b8'],
+    calculable : false,
+    series : [
+        {
+            name:'访问来源',
+            type:'pie',
+            radius : ['30%', '50%'],
+            itemStyle : {
+                normal : {
+                    label : {
+                        show : false
+                    },
+                    labelLine : {
+                        show : false
+                    }
+                },
+                emphasis : {
+                    label : {
+                        show : true,
+                        position : 'center',
+                        textStyle : {
+                            fontSize : '20',
+                            fontWeight : 'bold'
+                        }
+                    }
+                }
+            },
+            data:[
+                {value:335, name:'直接访问'},
+                {value:310, name:'邮件营销'},
+                {value:234, name:'联盟广告'},
+                {value:135, name:'视频广告'},
+                {value:1548, name:'搜索引擎'}
+            ]
+        }
+    ]
+};
+var option2 = {
+    
+    tooltip : {
+        trigger: 'axis'
+    },
+    color: ['#fa7d7d', '#f9dd8a', '#5bc7e6', '#aeb3b8'],
+    
+    calculable : false,
+    yAxis : [
+        {
+            type : 'value',
+            boundaryGap : [0, 0.01]
+        }
+    ],
+    xAxis : [
+        {
+            type : 'category',
+            data : ['巴西','印尼','美国','印度','中国','世界人口(万)']
+        }
+    ],
+    series : [
+        {
+            name:'2011年',
+            type:'bar',
+            data:[18203, 23489, 29034, 104970, 131744, 630230]
+        },
+        {
+            name:'2012年',
+            type:'bar',
+            data:[19325, 23438, 31000, 121594, 134141, 681807]
+        },
+       {
+            name:'2013年',
+            type:'bar',
+            data:[1823, 23489, 11, 3333, 444, 630230]
+        },
+      {
+            name:'2014年',
+            type:'bar',
+            data:[1823, 23489, 11, 3333, 444, 630230]
+        },
+    ]
+};
+        
+$(function(){
+    var aduitObj = {
+        init: function(){
+            this.tableHover();
+
+            this.drawChart({
+                wrap: '#main',
+                data: option
+            });
+
+            this.drawChart({
+                wrap: '#main2',
+                data: option2
+            });
+
+            this.getTableList();
+            this.getNetworkList();
+        },
+        tableHover: function(config){
+            config = $.extend({
+                wrap: '#network-table-wrap',
+                list: '.network-tabletr',
+                className: 'active',
+                listTd: '.network-table-list'
+            }, config || {});
+            var wrap = $(config.wrap),
+                list = wrap.find(config.list),
+                className = config.className;
+
+                list.hover(function(){
+                    var that = $(this);
+                    that.siblings().removeClass(className).end().addClass(className);
+                    that.find(config.listTd).show();
+                }, function(){
+                     var that = $(this);
+                     that.removeClass(className);
+                     that.find(config.listTd).hide();
+                });
+        },
+        drawChart: function(config){
+            config = config || {};
+            var wrap = $(config.wrap),
+                myChart;
+
+
+            wrap.length && (myChart = echarts.init(wrap[0]));  
+            myChart && myChart.setOption(config.data);
+        },
+        createAjax: function(config){
+            var deaultConf = {
+                method: 'get'
+            };
+
+            config = $.extend(deaultConf, config || {});
+
+            var method = config.method;
+
+            $[method](config.url)
+                .success(function(data){
+                    if(method === 'get'){
+                        $(config.wrap).html(baidu.template(config.tpl, data));
+                    }
+                })
+                .error(function() { console.log("error"); });
+        },
+        getTableList: function(){
+             this.createAjax({
+                url: '../data/table.json',
+                wrap: '#network-tbody',
+                tpl: 'network-table'
+             });
+        },
+        getNetworkList: function(){
+            this.createAjax({
+                url: '../data/networklist.json',
+                wrap: '#network-list-box',
+                tpl: 'network-list-tpl'
+             });
+        }
+    };
+
+    aduitObj.init();
+
+});
+

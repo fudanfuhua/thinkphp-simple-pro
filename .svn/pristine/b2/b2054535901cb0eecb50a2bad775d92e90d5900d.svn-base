@@ -1,0 +1,151 @@
+!function() {
+	function dashboard() {
+		//初始化参数
+		this.requestParam 	= "";
+		this.requestURL 	= {
+			ignore: $.getAppURL('/dashboard/ignoreQuery'),
+			list: $.getAppURL('/dashboard/listQuery'),
+			card: $.getAppURL('/dashboard/cardQuery'),
+		};
+
+		//接口请求(Func)
+		this.AjaxEvent();
+
+		//DOM渲染(Func)
+		this.DomRender();
+
+		//DOM事件处理
+		this.DomEvent();
+	};
+
+	dashboard.prototype.DomEvent = function() {
+		var _this = this;
+
+		//卡片事件
+		$('.main-card').on('click', '.card', function(e) {
+			var cardid = $(e.target).data('cardid');
+			$('.card.active').removeClass('active');
+			$(e.target).parents('.card').addClass('active');
+
+			_this.cardAjax(cardid);
+		});
+
+		//列表事件
+		$('.info-list').on('click', 'a', function(e) {
+			var listid = $(e.target).data('listid');
+			$("a.active").removeClass('active');
+			$(e.target).addClass('active');
+
+			_this.listAjax(listid);
+		});
+
+		//"忽略"显示事件
+		$('.info-box').bind('mouseover', function(e) {
+			$(this).addClass('active');
+		});
+
+		$('.info-box').bind('mouseleave', function(e) {
+			$(this).removeClass('active');
+		});
+
+		//"忽略"点击事件
+		$('.timeline').on('click', '.ignore-icon', function(e) {
+			var $ignoreEle	= $(e.target);
+			var infoid 		= $(e.target).data('infoid');
+
+			_this.ignoreAjax($ignoreEle, infoid);
+		});
+
+		
+	};
+
+	dashboard.prototype.AjaxEvent = function() {
+		var _this = this;
+
+		//"忽略"点击事件(Ajax)
+		this.ignoreAjax = function($ignoreEle, infoid) {
+			$.post(_this.requestURL.ignore, { ignoreid: infoid }, function(data) {
+				if (data.flag == 0) {
+					$ignoreEle.parents('.info-box').remove();
+					return;
+				}
+				alert("remove fail");
+			}, 'json');
+		};
+
+		//列表事件(Ajax)
+		this.listAjax = function(listid) {
+			$.post(_this.requestURL.list, { listid: listid }, function(data) {
+				if (data.flag == 0) {
+					//DOM render
+					_this.infoRender(data.data);
+					return;
+				}
+				alert("fatch fail");
+			}, 'json');
+		};
+
+		//卡片事件(Ajax)
+		this.cardAjax = function(cardid) {
+			$.post(_this.requestURL.card, { cardid: cardid }, function(data) {
+				if (data.flag == 0) {
+					//DOM render
+					_this.listRender(data.data);
+					return;
+				}
+				alert("fatch fail");
+			}, 'json');
+		};
+	};
+
+	dashboard.prototype.DomRender = function() {
+
+		this.infoRender = function(data) {
+			var tpldata 	= { list: data },
+			 		tpl 	= ' <% for(var i = 0; i < list.length; i++) { %>\
+			 						<% var item = list[i], num = i+1 %> \
+				 					<div class="info-box">   \
+										<div class="info-content"> \
+											<p>问题<%=num%>:<%=item.question %></p> \
+											<p>我们的建议:<%=item.suggest %></p> \
+											<p><span>ID: <%=item.ID%></span><span>时间:<%=item.time %></span></p> \
+											<span class="circle-icon"></span> \
+											<span class="line-icon"></span> \
+											<span class="ignore-icon" data-infoid="111">忽略</span> \
+										</div> \
+									</div> \
+								<% } %>';
+
+			$('.timeline').append( _.template(tpl)(tpldata) );
+
+			//DOM事件处理
+			this.DomEvent();
+		};
+
+		this.cardRender = function(data) {
+
+			var tpldata 	= { list: data },
+			 		tpl 	= ' <% for(var i = 0; i < list.length; i++) { %>\
+			 						<% var item = list[i] %> \
+				 					<div class="card" data-cardid=""> \
+										<ul> \
+											<li><%=item.title%></li> \
+											<li>item.num</li> \
+											<li>item.status</li> \
+										</ul> \
+									</div> \
+								<% } %>';
+
+			$('.main-card').append( _.template(tpl)(tpldata) );
+
+			//DOM事件处理
+			this.DomEvent();
+
+		};
+
+
+
+	};
+
+	new dashboard();
+}(window, $);
